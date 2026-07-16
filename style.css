@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f9260,#5219a9);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.form input{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+.form button{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#198754;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.form button:hover{
+    background:#084298;
+    transform:scale(1.03);
+}
+
+.searchBox{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.searchBox input{
+    flex:1;
+    min-width:200px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+.searchBox button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#198754;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.searchBox button:hover{
+    background:#ff0000;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:10px;
+    background:white;
+}
+
+thead{
+    background:#4a1db3;
+    color:white;
+}
+
+th,td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:nth-child(even){
+    background:#f4f4f4;
+}
+
+tbody tr:hover{
+    background:#dbeafe;
+}
+
+.deleteBtn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.deleteBtn:hover{
+    background:#ff0019;
+}
+
+@media(max-width:768px){
+
+    .form{
+        grid-template-columns:1fr;
+    }
+
+    .searchBox{
+        flex-direction:column;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    th,td{
+        padding:10px;
+    }
+
+}
